@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NextMove</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    /* Custom dotted vertical line for the career path */
+    .vertical-dotted-line {
+      border-left: 1px dotted #6b7280;
+      height: 80px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-700 via-purple-600 to-pink-500 min-h-screen text-gray-900">
+  <header class="bg-[#1e1b3a] text-white px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
+    <div class="flex items-center space-x-2 font-semibold text-lg">
+      <i class="fas fa-arrow-right"></i>
+      <span>NextMove</span>
+    </div>
+    <nav class="hidden md:flex space-x-6 text-sm text-gray-300">
+      <a href="index.html" class="hover:text-white font-semibold text-white">Home</a>
+      <a href="courses.html" class="hover:text-white">Courses</a>
+      <a href="colleges.html" class="hover:text-white">Colleges</a>
+      <a href="assessment1.html" class="hover:text-white">Assessment</a>
+      <a href="jobs.html" class="hover:text-white">Jobs</a>
+      <a href="webinars.html" class="hover:text-white">Webinars</a>
+      <a href="roadmap.html" class="hover:text-white">Roadmap</a>
+      <a href="feedbackform.html" class="hover:text-white">Feedback</a>
+      <a href="resources.html" class="hover:text-white">Resources</a>
+    </nav>
+    <div class="hidden md:flex space-x-3">
+      <button class="text-pink-500 border border-pink-500 text-xs px-3 py-[3px] rounded-sm hover:bg-pink-600 transition">
+        <a href="login.html">Login</a>
+      </button>
+      <button class="bg-pink-600 text-white text-xs px-3 py-[3px] rounded-sm hover:bg-pink-700 transition">
+        <a href="signup.html">Sign Up</a>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-12 max-w-7xl mx-auto">
+    <section class="text-white max-w-lg md:max-w-xl space-y-4">
+      <h1 class="font-extrabold text-3xl sm:text-4xl leading-tight">
+        Discover Your Perfect <br />Career Path
+      </h1>
+      <p class="text-sm sm:text-base text-white/90 max-w-md">
+        Guidance for students and job seekers to make informed decisions about their future.
+      </p>
+      <div class="flex space-x-3">
+        <button
+          class="flex items-center space-x-2 border border-white/70 rounded px-3 py-1.5 text-sm hover:bg-white/20 transition"
+        >
+          <i class="fas fa-file-alt"></i>
+          <span><a href="assessment.html">Take Assessment</a></span>
+        </button>
+        <button
+          class="flex items-center space-x-2 bg-white/90 text-purple-700 rounded px-3 py-1.5 text-sm hover:bg-white transition"
+        >
+          <i class="fas fa-map"></i>
+          <span><a href="roadmap.html">View Roadmap</a></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="relative w-64 h-64 mb-10 md:mb-0">
+      <span class="absolute top-2 left-1/2 -translate-x-1/2 text-white text-xs font-semibold">Career Path</span>
+
+      <div
+        class="absolute top-10 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-purple-600/40 flex flex-col items-center justify-center"
+      >
+        <!-- Starting Point circle -->
+        <div class="relative flex flex-col items-center">
+          <div
+            class="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white text-[9px] font-semibold"
+          >
+            Starting Point
+          </div>
+          <div class="vertical-dotted-line"></div>
+        </div>
+
+        <!-- First row of blue circles -->
+        <div class="flex space-x-10 mt-3">
+          <div class="w-8 h-8 rounded-full bg-blue-600"></div>
+          <div class="w-8 h-8 rounded-full bg-blue-600"></div>
+        </div>
+
+        <!-- Second row of cyan circles -->
+        <div class="flex space-x-10 mt-3">
+          <div class="w-7 h-7 rounded-full bg-cyan-400"></div>
+          <div class="w-7 h-7 rounded-full bg-cyan-400"></div>
+          <div class="w-7 h-7 rounded-full bg-cyan-400"></div>
+        </div>
+
+        <!-- Third row of dark blue circles -->
+        <div class="flex space-x-6 mt-3">
+          <div class="w-6 h-6 rounded-full bg-blue-900"></div>
+          <div class="w-6 h-6 rounded-full bg-blue-900"></div>
+          <div class="w-6 h-6 rounded-full bg-blue-900"></div>
+          <div class="w-6 h-6 rounded-full bg-blue-900"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Webinars - Career Counselling Sessions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body class="bg-gradient-to-br from-purple-700 via-purple-600 to-pink-500 min-h-screen text-gray-900">
+  <header class="bg-[#1e1b3a] text-white px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
+    <div class="flex items-center space-x-2 font-semibold text-lg">
+      <i class="fas fa-arrow-right"></i>
+      <span>NextMove</span>
+    </div>
+    <nav class="hidden md:flex space-x-6 text-sm text-gray-300">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <a href="courses.html" class="hover:text-white">Courses</a>
+      <a href="colleges.html" class="hover:text-white">Colleges</a>
+      <a href="assessment1.html" class="hover:text-white">Assessment</a>
+      <a href="jobs.html" class="hover:text-white">Jobs</a>
+      <a href="webinars.html" class="hover:text-white font-semibold">Webinars</a>
+      <a href="roadmap.html" class="hover:text-white">Roadmap</a>
+      <a href="feedbackform.html" class="hover:text-white">Feedback</a>
+      <a href="resources.html" class="hover:text-white">Resources</a>
+    </nav>
+    <div class="hidden md:flex space-x-3">
+      <button class="text-pink-500 border border-pink-500 text-xs px-3 py-[3px] rounded-sm hover:bg-pink-600 transition">
+        <a href="login.html">Login</a>
+      </button>
+      <button class="bg-pink-600 text-white text-xs px-3 py-[3px] rounded-sm hover:bg-pink-700 transition">
+        <a href="signup.html">Sign Up</a>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-white text-4xl font-extrabold mb-10 text-center">Career Counselling Webinars</h1>
+
+    <p class="text-white text-center max-w-xl mx-auto mb-12">
+      Join our expert-led career counselling sessions to get personalized guidance and make informed decisions about your future.
+    </p>
+
+    <section class="space-y-8">
+      <!-- Webinar cards -->
+      <article class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-semibold mb-2">Choosing the Right Career Path</h2>
+        <p class="text-gray-700 mb-3">
+          Date: <strong>June 15, 2025</strong> | Time: <strong>4:00 PM - 5:30 PM IST</strong>
+        </p>
+        <p class="text-gray-700 mb-4">
+          Learn how to identify your strengths and interests to select the best career options.
+        </p>
+        <button
+          class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition"
+          onclick="openRegistration('Choosing the Right Career Path', 'June 15, 2025', '4:00 PM - 5:30 PM IST')"
+        >
+          Register Now
+        </button>
+      </article>
+
+      <article class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-semibold mb-2">Exploring Diploma and Certification Courses</h2>
+        <p class="text-gray-700 mb-3">
+          Date: <strong>June 22, 2025</strong> | Time: <strong>3:00 PM - 4:30 PM IST</strong>
+        </p>
+        <p class="text-gray-700 mb-4">
+          Understand the value of diploma and certification courses in building a successful career.
+        </p>
+        <button
+          class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition"
+          onclick="openRegistration('Exploring Diploma and Certification Courses', 'June 22, 2025', '3:00 PM - 4:30 PM IST')"
+        >
+          Register Now
+        </button>
+      </article>
+
+      <article class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-semibold mb-2">Career Opportunities in Emerging Technologies</h2>
+        <p class="text-gray-700 mb-3">
+          Date: <strong>June 29, 2025</strong> | Time: <strong>5:00 PM - 6:30 PM IST</strong>
+        </p>
+        <p class="text-gray-700 mb-4">
+          Discover career options in AI, Data Science, Cybersecurity, and other emerging fields.
+        </p>
+        <button
+          class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition"
+          onclick="openRegistration('Career Opportunities in Emerging Technologies', 'June 29, 2025', '5:00 PM - 6:30 PM IST')"
+        >
+          Register Now
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <!-- Registration Modal -->
+  <div
+    id="registrationModal"
+    class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50"
+  >
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+      <button
+        class="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+        onclick="closeRegistration()"
+        aria-label="Close modal"
+      >
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <h3 id="modalTitle" class="text-xl font-semibold mb-4"></h3>
+      <p id="modalDateTime" class="text-gray-700 mb-6"></p>
+      <form id="registrationForm" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            placeholder="Enter your full name"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="[0-9]{10}"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            placeholder="Enter 10-digit phone number"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-purple-700 text-white font-semibold py-2 rounded hover:bg-purple-800 transition"
+        >
+          Submit Registration
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("registrationModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDateTime = document.getElementById("modalDateTime");
+    const registrationForm = document.getElementById("registrationForm");
+
+    function openRegistration(title, date, time) {
+      modalTitle.textContent = title;
+      modalDateTime.textContent = `Date: ${date} | Time: ${time}`;
+      modal.classList.remove("hidden");
+    }
+
+    function closeRegistration() {
+      modal.classList.add("hidden");
+      registrationForm.reset();
+    }
+
+    registrationForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const phone = this.phone.value.trim();
+
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+      }
+
+      alert(`Thank you, ${name}! You have successfully registered for the webinar.\nWe will contact you at ${email} or ${phone}.`);
+      closeRegistration();
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeRegistration();
+      }
+    });
+
+    // Close modal on Escape key
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeRegistration();
+      }
+    });
+  </script>
+</body>
+</html>

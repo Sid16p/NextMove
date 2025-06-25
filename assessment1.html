@@ -1,0 +1,405 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Assessment - NextMove</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body class="bg-gradient-to-r from-[#6b21a8] to-[#db2777] min-h-screen flex flex-col">
+  <header class="bg-[#1e1b3a] text-white">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-12">
+        <div class="flex items-center space-x-4">
+          <a href="#" class="flex items-center space-x-1 font-semibold text-white text-sm">
+            <i class="fas fa-arrow-right"></i>
+            <span>NextMove</span>
+          </a>
+          <a href="#" class="text-gray-400 text-xs font-semibold">Courses</a>
+          <a href="#" class="text-gray-400 text-xs">Colleges</a>
+          <a href="#" class="text-gray-400 text-xs">Assessment</a>
+          <a href="#" class="text-gray-400 text-xs">Jobs</a>
+          <a href="#" class="text-gray-400 text-xs">Webinars</a>
+          <a href="#" class="text-gray-400 text-xs">Roadmap</a>
+          <a href="#" class="text-gray-400 text-xs">Feedback</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input
+            type="text"
+            placeholder="Search courses, colleges,"
+            class="text-xs rounded border border-gray-600 bg-[#1e1b3a] placeholder:text-gray-400 text-white px-2 py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          />
+          <button class="text-gray-400 text-xs p-1 rounded hover:bg-gray-700">
+            <i class="fas fa-search"></i>
+          </button>
+          <button
+            class="text-xs text-pink-600 border border-pink-600 rounded px-3 py-1 hover:bg-pink-600 hover:text-white transition"
+          >
+            Login
+          </button>
+          <button
+            class="text-xs bg-pink-600 text-white rounded px-3 py-1 hover:bg-pink-700 transition"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto p-6 sm:p-12 bg-white rounded-lg shadow-lg my-12">
+    <h1 class="text-3xl font-extrabold text-[#6b21a8] mb-8 text-center">
+      Career Assessment
+    </h1>
+    <form id="assessmentForm" class="space-y-6 text-gray-700">
+      <!-- 1. Name (text input) -->
+      <div>
+        <label for="name" class="block font-semibold mb-1">1. What is your full name?</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <!-- 2. Age (dropdown) -->
+      <div>
+        <label for="age" class="block font-semibold mb-1">2. What is your age group?</label>
+        <select
+          id="age"
+          name="age"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+        >
+          <option value="" disabled selected>Select your age group</option>
+          <option value="under_15">Under 15</option>
+          <option value="15_18">15-18</option>
+          <option value="19_25">19-25</option>
+          <option value="26_35">26-35</option>
+          <option value="36_plus">36+</option>
+        </select>
+      </div>
+
+      <!-- 3. Preferred Work Environment (checkboxes) -->
+      <div>
+        <p class="block font-semibold mb-1">3. Which work environments do you prefer? (Select all that apply)</p>
+        <div class="space-y-1">
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="work_env" value="office" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Office</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="work_env" value="outdoors" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Outdoors</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="work_env" value="remote" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Remote / Work from home</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="work_env" value="laboratory" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Laboratory</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 4. Favorite Subjects (checkboxes) -->
+      <div>
+        <p class="block font-semibold mb-1">4. What are your favorite subjects in school? (Select all that apply)</p>
+        <div class="space-y-1">
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="subjects" value="math" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Mathematics</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="subjects" value="science" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Science</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="subjects" value="literature" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Literature</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="subjects" value="arts" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Arts</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="subjects" value="social_studies" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Social Studies</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 5. Preferred Work Style (dropdown) -->
+      <div>
+        <label for="work_style" class="block font-semibold mb-1">5. What is your preferred work style?</label>
+        <select
+          id="work_style"
+          name="work_style"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+        >
+          <option value="" disabled selected>Select your preferred work style</option>
+          <option value="team">Team-oriented</option>
+          <option value="independent">Independent</option>
+          <option value="flexible">Flexible</option>
+          <option value="structured">Structured</option>
+        </select>
+      </div>
+
+      <!-- 6. Interest in Technology (dropdown) -->
+      <div>
+        <label for="tech_interest" class="block font-semibold mb-1">6. How interested are you in technology?</label>
+        <select
+          id="tech_interest"
+          name="tech_interest"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+        >
+          <option value="" disabled selected>Select your interest level</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+
+      <!-- 7. Do you enjoy problem solving? (dropdown) -->
+      <div>
+        <label for="problem_solving" class="block font-semibold mb-1">7. Do you enjoy problem solving?</label>
+        <select
+          id="problem_solving"
+          name="problem_solving"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="yes">Yes, very much</option>
+          <option value="sometimes">Sometimes</option>
+          <option value="rarely">Rarely</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <!-- 8. Preferred Career Field (checkboxes) -->
+      <div>
+        <p class="block font-semibold mb-1">8. Which career fields interest you? (Select all that apply)</p>
+        <div class="space-y-1">
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="career_fields" value="engineering" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Engineering</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="career_fields" value="healthcare" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Healthcare</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="career_fields" value="arts" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Arts & Design</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="career_fields" value="business" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Business & Management</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="career_fields" value="education" class="form-checkbox text-[#6b21a8]" />
+            <span class="ml-2">Education</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 9. How important is work-life balance to you? (dropdown) -->
+      <div>
+        <label for="work_life_balance" class="block font-semibold mb-1">9. How important is work-life balance to you?</label>
+        <select
+          id="work_life_balance"
+          name="work_life_balance"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="very_important">Very important</option>
+          <option value="somewhat_important">Somewhat important</option>
+          <option value="not_important">Not important</option>
+        </select>
+      </div>
+
+      <!-- 10. What motivates you most? (dropdown) -->
+      <div>
+        <label for="motivation" class="block font-semibold mb-1">10. What motivates you most in a career?</label>
+        <select
+          id="motivation"
+          name="motivation"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6b21a8]"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="helping_others">Helping others</option>
+          <option value="high_income">High income</option>
+          <option value="creativity">Creativity</option>
+          <option value="stability">Job stability</option>
+          <option value="leadership">Leadership opportunities</option>
+        </select>
+      </div>
+
+      <div class="text-center">
+        <button
+          type="submit"
+          class="bg-[#6b21a8] text-white px-6 py-3 rounded font-semibold hover:bg-[#581c87] transition"
+        >
+          Calculate Result
+        </button>
+      </div>
+    </form>
+
+    <section
+      id="resultSection"
+      class="mt-10 p-6 bg-[#f3f4f6] rounded text-gray-800 hidden"
+      aria-live="polite"
+    >
+      <h2 class="text-2xl font-bold mb-4 text-center text-[#6b21a8]">Your Career Recommendation</h2>
+      <p id="resultText" class="text-center text-lg"></p>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById("assessmentForm");
+    const resultSection = document.getElementById("resultSection");
+    const resultText = document.getElementById("resultText");
+
+    // Simple scoring system for career recommendation
+    // Each answer adds points to different career categories
+    // Categories: Engineering, Healthcare, Arts, Business, Education
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Collect form data
+      const formData = new FormData(form);
+
+      // Initialize scores
+      let scores = {
+        engineering: 0,
+        healthcare: 0,
+        arts: 0,
+        business: 0,
+        education: 0,
+      };
+
+      // 3. Work environment preferences
+      const workEnv = formData.getAll("work_env");
+      workEnv.forEach((env) => {
+        if (env === "office") scores.business += 1;
+        if (env === "outdoors") scores.engineering += 1;
+        if (env === "remote") scores.business += 1;
+        if (env === "laboratory") scores.engineering += 2;
+      });
+
+      // 4. Favorite subjects
+      const subjects = formData.getAll("subjects");
+      subjects.forEach((subj) => {
+        if (subj === "math") scores.engineering += 2;
+        if (subj === "science") scores.engineering += 2;
+        if (subj === "literature") scores.education += 2;
+        if (subj === "arts") scores.arts += 3;
+        if (subj === "social_studies") scores.education += 1;
+      });
+
+      // 5. Work style
+      const workStyle = formData.get("work_style");
+      if (workStyle === "team") {
+        scores.healthcare += 2;
+        scores.business += 1;
+        scores.education += 2;
+      } else if (workStyle === "independent") {
+        scores.engineering += 2;
+        scores.arts += 1;
+      } else if (workStyle === "flexible") {
+        scores.arts += 2;
+        scores.business += 1;
+      } else if (workStyle === "structured") {
+        scores.engineering += 2;
+        scores.healthcare += 2;
+      }
+
+      // 6. Interest in technology
+      const techInterest = formData.get("tech_interest");
+      if (techInterest === "high") scores.engineering += 3;
+      else if (techInterest === "medium") scores.engineering += 1;
+
+      // 7. Problem solving
+      const problemSolving = formData.get("problem_solving");
+      if (problemSolving === "yes") scores.engineering += 3;
+      else if (problemSolving === "sometimes") scores.business += 1;
+
+      // 8. Career fields interest
+      const careerFields = formData.getAll("career_fields");
+      careerFields.forEach((field) => {
+        if (field === "engineering") scores.engineering += 3;
+        if (field === "healthcare") scores.healthcare += 3;
+        if (field === "arts") scores.arts += 3;
+        if (field === "business") scores.business += 3;
+        if (field === "education") scores.education += 3;
+      });
+
+      // 9. Work-life balance importance
+      const workLifeBalance = formData.get("work_life_balance");
+      if (workLifeBalance === "very_important") {
+        scores.education += 1;
+        scores.arts += 1;
+      }
+
+      // 10. Motivation
+      const motivation = formData.get("motivation");
+      if (motivation === "helping_others") scores.healthcare += 3;
+      else if (motivation === "high_income") scores.business += 3;
+      else if (motivation === "creativity") scores.arts += 3;
+      else if (motivation === "stability") scores.education += 2;
+      else if (motivation === "leadership") scores.business += 2;
+
+      // Determine highest score category
+      const maxScore = Math.max(...Object.values(scores));
+      const bestCareers = Object.entries(scores)
+        .filter(([_, score]) => score === maxScore)
+        .map(([career]) => career);
+
+      // Map career keys to readable names and descriptions
+      const careerDescriptions = {
+        engineering:
+          "Engineering: You have a strong aptitude for math, science, and problem-solving. Careers in engineering, technology, or research may suit you well.",
+        healthcare:
+          "Healthcare: You are motivated by helping others and enjoy team environments. Consider careers in healthcare, nursing, or medical fields.",
+        arts:
+          "Arts & Design: Your creativity and interest in arts make you a great fit for careers in design, fine arts, media, or creative industries.",
+        business:
+          "Business & Management: You prefer structured or flexible work styles and are motivated by leadership and income. Careers in business, management, or entrepreneurship may be ideal.",
+        education:
+          "Education: You enjoy teaching, stability, and work-life balance. Consider careers in education, training, or social services.",
+      };
+
+      // Prepare result text
+      let resultMessage = "";
+      if (bestCareers.length === 1) {
+        resultMessage = careerDescriptions[bestCareers[0]];
+      } else {
+        resultMessage =
+          "You have multiple strong career interests:\n\n" +
+          bestCareers
+            .map((career) => careerDescriptions[career])
+            .join("\n\n");
+      }
+
+      // Show result
+      resultText.textContent = resultMessage;
+      resultSection.classList.remove("hidden");
+      resultSection.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
