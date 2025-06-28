@@ -26,21 +26,28 @@ they achieve their goals without any distractions.
 Who can benefit from Career Guidance? 
 
  Student Of Class 9th - 10th 
+
  Student Of Class 11th - 12th 
+
  Job Seekers
 
 PURPOSE 
 
  Information Resource: It provides comprehensive information about various career options, 
 including job descriptions, required qualifications, and industry trends. 
+
  Assessment Tools: Many portals offer personality and skills assessments to help users 
 identify suitable career paths based on their interests and strengths. 
+
  Educational Resources: They often include resources for further education and training, such 
 as courses, certifications, and workshops relevant to different fields. 
+
  Job Search Assistance: Some portals feature job listings, internship opportunities, and tips 
 on job searching. 
+
  Networking Opportunities: They can connect users with professionals in their desired fields 
 through webinars, and mentorship programs. 
+
  Guidance and Counseling: Many portals offer access to career counselors who can provide 
 personalized advice and support. 
 
